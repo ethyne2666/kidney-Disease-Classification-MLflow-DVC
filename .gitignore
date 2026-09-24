@@ -1,0 +1,104 @@
+# =========================
+# Python Virtual Environment
+# =========================
+kidney/
+
+# =========================
+# Python cache / compiled files
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# =========================
+# Python packaging
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+!.vscode/settings.json
+
+# =========================
+# PyCharm
+# =========================
+.idea/
+
+# =========================
+# Operating System files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# DVC cache
+# =========================
+.dvc/cache/
+
+# =========================
+# ML / Model generated files
+# =========================
+*.h5
+*.hdf5
+*.keras
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.pb
+
+# =========================
+# TensorFlow generated files
+# =========================
+checkpoint
+checkpoints/
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# =========================
+# Coverage / Testing
+# =========================
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# =========================
+# Secrets / Credentials
+# =========================
+*.pem
+*.key
+credentials.json
+secrets.json
