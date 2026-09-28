@@ -36,3 +36,4 @@ pip install -r requirements.txt
 9. Update the dvc.yaml
 10. app.py
 
+01_setup_data_ingestion files
