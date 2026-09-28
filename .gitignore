@@ -102,3 +102,6 @@ htmlcov/
 *.key
 credentials.json
 secrets.json
+
+
+artifacts/*
