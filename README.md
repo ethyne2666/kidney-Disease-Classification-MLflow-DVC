@@ -186,3 +186,19 @@ AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
 
 ECR_REPOSITORY_NAME = simple-app
 ```
+
+
+
+aws ecr uri : 172132042624.dkr.ecr.ap-south-1.amazonaws.com/kidney<br>
+
+in the setting of github<br>
+
+## Github actions
+
+#### inside Runners Create an self-hosted runner
+#### in the setting , go to secrets and variables for the project and actions add all the secretes releated to the aws like
+ - aws region
+ - i am user access key
+ - i am user secret key
+ - ecr uri
+ - ecr repository name
