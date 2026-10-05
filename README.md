@@ -41,3 +41,37 @@ pip install -r requirements.txt
 
 the code that we have wrote in the note books we need to write in the python files this is known as *modular coding*
 
+
+
+# MLflow
+
+cmd
+mlflow ui
+dagshub
+
+MLFLOW_TRACKING_URI=https://dagshub.com/charankumar2666/kidney-Disease-Classification-MLflow-DVC.mlflow
+MLFLOW_TRACKING_USERNAME=charankumar2666
+MLFLOW_TRACKING_PASSWORD=
+python script.py
+
+*Run this to export as env variables*:
+```
+
+$env MLFLOW_TRACKING_URI=https://dagshub.com/charankumar2666/kidney-Disease-Classification-MLflow-DVC.mlflow
+
+$env MLFLOW_TRACKING_USERNAME=charankumar2666
+
+$env MLFLOW_TRACKING_PASSWORD=
+
+```
+
+
+### DVC cmd
+
+dvc init
+dvc repro
+dvc dag
+
+
+
+
