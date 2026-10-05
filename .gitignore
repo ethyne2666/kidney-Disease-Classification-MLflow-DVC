@@ -64,7 +64,6 @@ logs/
 # =========================
 # ML / Model generated files
 # =========================
-*.h5
 *.hdf5
 *.keras
 *.ckpt

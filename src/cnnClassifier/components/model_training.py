@@ -1,4 +1,5 @@
 import os
+import shutil
 import urllib.request as request
 from zipfile import ZipFile
 import tensorflow as tf
@@ -85,3 +86,7 @@ class Training:
             path=self.config.trained_model_path,
             model=self.model
         )
+
+        # copy the trained model to the model/ folder for the web app
+        os.makedirs("model", exist_ok=True)
+        shutil.copy(self.config.trained_model_path, os.path.join("model", "model.h5"))
