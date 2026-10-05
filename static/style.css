@@ -1,0 +1,62 @@
+:root{--ink:#1f2d3d;--muted:#5a6b7b;--blue:#0b5cab;--blue-dark:#084681;--tint:#eef5fb;--line:#dbe4ec;
+  --bad:#b3261e;--bad-bg:#fdecea;--good:#1b6e3c;--good-bg:#e8f5ec}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:"Public Sans",system-ui,sans-serif;background:#fff;color:var(--ink);line-height:1.65}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+section.wrap{padding-top:64px;padding-bottom:64px}
+.nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;
+  padding:14px clamp(16px,5vw,64px);background:#fff;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1.2rem;color:var(--blue);text-decoration:none}
+.nav nav{display:flex;gap:24px}
+.nav nav a{text-decoration:none;color:var(--muted);font-weight:500}
+.nav nav a:hover{color:var(--blue)}
+.hero{background:var(--tint);border-bottom:1px solid var(--line);padding:64px 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.hero img{width:100%;max-height:340px;object-fit:contain;border-radius:12px;background:#fff}
+h1{font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.2;font-weight:700;margin-bottom:16px}
+h2{font-size:1.7rem;font-weight:700;margin-bottom:8px}
+h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
+.hero p{color:var(--muted);max-width:52ch;margin-bottom:24px}
+.lead{color:var(--muted);margin-bottom:28px}
+.btn{font:inherit;font-weight:600;padding:11px 24px;border-radius:6px;border:1.5px solid var(--blue);cursor:pointer;text-decoration:none;display:inline-block;transition:background .15s}
+.btn.primary{background:var(--blue);color:#fff}
+.btn.primary:hover:not(:disabled){background:var(--blue-dark)}
+.btn.ghost{background:#fff;color:var(--blue)}
+.btn.ghost:hover{background:var(--tint)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:3px solid #7fb2e5;outline-offset:2px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px}
+.drop{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:300px;padding:20px;
+  border:2px dashed #9dbbd9;border-radius:10px;background:var(--tint);cursor:pointer;text-align:center;color:var(--muted);transition:border-color .15s}
+.drop:hover,.drop.over{border-color:var(--blue)}
+.drop svg{color:var(--blue)}
+.drop small{font-size:.85rem}
+.drop img{width:100%;max-width:320px;height:260px;object-fit:contain;border-radius:6px;background:#fff}
+.drop img[hidden],.drop svg[hidden]{display:none}
+.actions{display:flex;gap:12px;margin-top:20px}
+.actions .btn{flex:1}
+.empty{color:var(--muted)}
+.badge{display:inline-block;font-size:1.6rem;font-weight:700;padding:12px 26px;border-radius:8px;margin-bottom:12px}
+.badge.normal{background:var(--good-bg);color:var(--good)}
+.badge.tumor{background:var(--bad-bg);color:var(--bad)}
+.note{color:var(--muted);font-size:.95rem}
+#result img{width:100%;max-height:260px;object-fit:contain;margin-top:16px;border-radius:6px}
+.disclaimer{margin-top:20px;font-size:.9rem;color:var(--muted);border-left:4px solid var(--blue);padding:8px 14px;background:var(--tint)}
+.learn{background:#f8fafc;border-top:1px solid var(--line);padding:64px 0}
+.learn h2{margin-bottom:28px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.two article{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px}
+.two p{color:var(--muted);max-width:60ch}
+.footer{background:var(--blue-dark);color:#fff;padding:28px 0}
+.foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer span{display:block;font-size:.9rem;opacity:.8}
+.footer a{font-weight:600}
+#loading{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:rgba(255,255,255,.85)}
+#loading[hidden]{display:none}
+.loader{width:48px;height:48px;border:5px solid var(--line);border-top-color:var(--blue);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.loader{animation-duration:3s}html{scroll-behavior:auto}}
+@media (max-width:800px){.hero-grid,.grid,.two{grid-template-columns:1fr}.nav nav{gap:14px;font-size:.9rem}}

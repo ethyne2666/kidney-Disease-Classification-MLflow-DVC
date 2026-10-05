@@ -75,7 +75,14 @@ $env MLFLOW_TRACKING_PASSWORD=
 *to track the stages's of the pipeline*
 1. dvc init<br>
 2. dvc repro<br>
-3. dvc dag<br>
+3. dvc dag (we will get the graph for the pipeline)<br> 
+
+
+## upload image & Prediction
+
+for the image upload's from the ui that first needed to be converted to base64 first <br>
+
+check that from the platform's like base64 guru encode and decode image's
 
 
 

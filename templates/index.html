@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidneyScan | Kidney CT Scan Classification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+      KidneyScan
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#classify">Check a scan</a>
+      <a href="#learn">Learn</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>Kidney CT scan analysis with deep learning</h1>
+          <p>Upload a kidney CT image and our model will tell you whether it looks normal or shows signs of a tumor.</p>
+          <a class="btn primary" href="#classify">Check a scan</a>
+        </div>
+        <img src="https://strapi.merillife.com/uploads/AI_for_healthcare_and_medical_devices_cbedc0336c.png" alt="AI for healthcare illustration">
+      </div>
+    </section>
+
+    <section class="wrap" id="classify">
+      <h2>Check a scan</h2>
+      <p class="lead">Choose a CT image from your device. Results appear on the right.</p>
+      <div class="grid">
+        <div class="card">
+          <label class="drop" id="drop" for="fileinput">
+            <svg id="camera" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>
+            </svg>
+            <img id="photo" alt="Selected scan preview" hidden>
+            <span id="drop-hint">Click to upload a CT image, or drag and drop it here</span>
+            <small>JPG or PNG</small>
+          </label>
+          <input type="file" id="fileinput" accept="image/*" hidden>
+          <div class="actions">
+            <button type="button" class="btn ghost" id="uload">Upload image</button>
+            <button type="button" class="btn primary" id="send" disabled>Predict</button>
+          </div>
+          <input type="hidden" id="url" value="../predict">
+        </div>
+
+        <div class="card" id="result" aria-live="polite">
+          <h3>Result</h3>
+          <div id="result-body" class="empty">Upload a scan and press Predict. Your result will appear here.</div>
+        </div>
+      </div>
+      <p class="disclaimer">This tool is for learning and demonstration. It is not a medical diagnosis. Always speak to a doctor about your health.</p>
+    </section>
+
+    <section class="learn" id="learn">
+      <div class="wrap">
+        <h2>Understanding the kidney and kidney tumors</h2>
+        <div class="two">
+          <article>
+            <h3>What the kidneys do</h3>
+            <p>You have two bean-shaped kidneys, each about the size of a fist, below your rib cage on either side of your spine. They filter your blood, remove waste and extra fluid as urine, and help control blood pressure and the balance of salts in your body.</p>
+          </article>
+          <article>
+            <h3>What a kidney tumor is</h3>
+            <p>A kidney tumor is an abnormal growth of cells in the kidney. Some are benign and some are cancerous. The most common kidney cancer in adults is renal cell carcinoma. Many tumors are found by chance on a scan done for another reason.</p>
+          </article>
+          <article>
+            <h3>Signs to watch for</h3>
+            <p>Early tumors often cause no symptoms. Later signs can include blood in the urine, a lump or lasting pain in the side, unexplained weight loss and tiredness. See a doctor if you notice any of these.</p>
+          </article>
+          <article>
+            <h3>Why CT scans are used</h3>
+            <p>A CT scan shows the kidney in detail, so doctors can see the size and position of a growth. A specialist makes the final diagnosis, often with further tests. This model only helps to flag scans that need a closer look.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="wrap foot-grid">
+      <div>
+        <strong>Charan Kumar</strong>
+        <span>Kidney disease classification, deep learning project</span>
+      </div>
+      <a href="mailto:charankumar2666@gmail.com">charankumar2666@gmail.com</a>
+    </div>
+  </footer>
+
+  <div id="loading" hidden><div class="loader"></div><p>Analysing scan...</p></div>
+  <script src="/static/script.js"></script>
+</body>
+</html>

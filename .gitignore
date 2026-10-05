@@ -105,3 +105,8 @@ secrets.json
 
 
 artifacts/*
+
+
+# uploaded images
+uploads/
+inputImage.jpg
