@@ -47,12 +47,15 @@ the code that we have wrote in the note books we need to write in the python fil
 
 cmd
 mlflow ui
-dagshub
+#### dagshub
 
-MLFLOW_TRACKING_URI=https://dagshub.com/charankumar2666/kidney-Disease-Classification-MLflow-DVC.mlflow
-MLFLOW_TRACKING_USERNAME=charankumar2666
-MLFLOW_TRACKING_PASSWORD=
-python script.py
+
+MLFLOW_TRACKING_URI=https://dagshub.com/charankumar2666/kidney-Disease-Classification-MLflow-DVC.mlflow <br>
+MLFLOW_TRACKING_USERNAME=charankumar2666<br>
+MLFLOW_TRACKING_PASSWORD=<br>
+python script.py<br>
+
+
 
 *Run this to export as env variables*:
 ```
@@ -65,12 +68,14 @@ $env MLFLOW_TRACKING_PASSWORD=
 
 ```
 
+![mlflow ui different versions](image.png)
 
-### DVC cmd
+### DVC -  Data Version Control
 
-dvc init
-dvc repro
-dvc dag
+*to track the stages's of the pipeline*
+dvc init<br>
+dvc repro<br>
+dvc dag<br>
 
 
 
