@@ -73,9 +73,9 @@ $env MLFLOW_TRACKING_PASSWORD=
 ### DVC -  Data Version Control
 
 *to track the stages's of the pipeline*
-dvc init<br>
-dvc repro<br>
-dvc dag<br>
+1. dvc init<br>
+2. dvc repro<br>
+3. dvc dag<br>
 
 
 
